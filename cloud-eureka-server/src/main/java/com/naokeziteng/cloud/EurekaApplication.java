@@ -2,7 +2,7 @@ package com.naokeziteng.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author aku
@@ -10,10 +10,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Description
  */
 @SpringBootApplication
-@EnableEurekaClient
-public class OrderApplication {
+@EnableEurekaServer
+public class EurekaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(EurekaApplication.class, args);
     }
 }
