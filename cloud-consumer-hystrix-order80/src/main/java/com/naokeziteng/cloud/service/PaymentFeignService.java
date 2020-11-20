@@ -1,5 +1,6 @@
 package com.naokeziteng.cloud.service;
 
+import com.naokeziteng.cloud.service.impl.PaymentFeignFallbackService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Date 2020/11/19
  * @Description
  */
-@FeignClient(value = "CLOUD_PAYMENT_SERVICE")
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE",fallback = PaymentFeignFallbackService.class)
 public interface PaymentFeignService {
 
     @GetMapping("/payment/hystrix/ok/{id}")

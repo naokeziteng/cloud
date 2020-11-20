@@ -22,4 +22,11 @@ public interface PaymentService {
      * @return
      */
     String payment_timeout(Long id);
+
+    /**
+     * 熔断测试
+     * @param id
+     * @return
+     */
+    String paymentCircuitBreaker(Long id);
 }
