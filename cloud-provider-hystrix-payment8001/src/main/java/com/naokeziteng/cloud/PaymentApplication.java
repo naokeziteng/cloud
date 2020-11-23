@@ -23,7 +23,8 @@ public class PaymentApplication {
     }
 
     /**
-     * 此配置是为了服务监控而配置，与服务容错本身无关
+     * 此配置是为了服务监控而配置，与服务容错本身无关,springcloud升级后的坑
+     * ServletRegistrationBean因为springboot的默认路径不是"/hystrix.stream"
      * @return
      */
     @Bean
