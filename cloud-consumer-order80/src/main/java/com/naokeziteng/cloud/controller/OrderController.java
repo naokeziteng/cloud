@@ -50,4 +50,10 @@ public class OrderController {
         URI uri = instance.getUri();
         return restTemplate.getForObject(uri + "/payment/" + id, CommonResult.class);
     }
+
+    @GetMapping("/payment/sleuth")
+    public String sleuth() {
+        String result = restTemplate.getForObject("http://localhost:8001/payment/sleuth", String.class);
+        return result;
+    }
 }

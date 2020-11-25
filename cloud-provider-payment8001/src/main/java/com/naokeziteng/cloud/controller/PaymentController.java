@@ -34,4 +34,9 @@ public class PaymentController {
         log.info("请求成功" + serverPort);
         return CommonResult.success(paymentService.getPaymentById(id));
     }
+
+    @GetMapping("/sleuth")
+    public String sleuth() {
+        return "sleuth链路测试...";
+    }
 }
