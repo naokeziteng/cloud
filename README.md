@@ -36,3 +36,17 @@ services:
       - 9411:9411  
     restart: always  
 #--------------------------------
+# nacos 单机版  
+#--------------------------------  
+version: '3'  
+
+services:  
+  hawk_nacos:  
+    image: nacos/nacos-server  
+    container_name: hawk_nacos  
+    ports:  
+      - 8848:8848  
+    environment:  
+      - MODE=standalone  
+    restart: always  
+#--------------------------------
